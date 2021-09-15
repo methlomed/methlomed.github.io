@@ -3,7 +3,7 @@ import '../data/data-source.js';
 
 const main = () => {
   const searchElement = document.querySelector("search-bar");
-  const clubListElement = document.querySelector("filmList");
+  const clubListElement = document.querySelector("film-list");
 
   const onButtonSearchClicked = async () => {
       try {
