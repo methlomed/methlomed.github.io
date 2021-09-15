@@ -3,7 +3,7 @@ import '../data/data-source.js';
 
 const main = () => {
   const searchElement = document.querySelector("search-bar");
-  const clubListElement = document.querySelector("film-list");
+  const filmListElement = document.querySelector("#filmList");
 
   const onButtonSearchClicked = async () => {
       try {
@@ -18,8 +18,8 @@ const main = () => {
       filmListElement.innerHTML = "";
       results.forEach(film => {
           const { Title, Poster, Year } = film;
-          const clubElement = document.createElement("div");
-          clubElement.setAttribute("class", "film");
+          const filmElement = document.createElement("div");
+          filmElement.setAttribute("class", "film");
 
           filmElement.innerHTML = `
           <section class="container">
@@ -40,13 +40,13 @@ const main = () => {
         </section>
           `;
 
-          clubListElement.appendChild(filmElement);
+          filmListElement.appendChild(filmElement);
       })
   };
 
   const fallbackResult = message => {
-      clubListElement.innerHTML = "";
-      clubListElement.innerHTML += `<h2 class="placeholder">${message}</h2>`;
+      filmListElement.innerHTML = "";
+      filmListElement.innerHTML += `<h2 class="placeholder">${message}</h2>`;
   };
 
   searchElement.clickEvent = onButtonSearchClicked;
