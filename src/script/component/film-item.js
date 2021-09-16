@@ -6,8 +6,6 @@ class FilmItem extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <section class="container">
-    <div class="row" id="film-list">
       <div class="col-md-4">   
         <div class="card mb-4">
           <img src="${this._film.Poster}" class="card-img-top" height="400"/>
@@ -18,8 +16,6 @@ class FilmItem extends HTMLElement {
           </div>
         </div>  
       </div>
-    </div>
-  </section>
     `;
   }
 }
