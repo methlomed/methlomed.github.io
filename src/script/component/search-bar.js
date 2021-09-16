@@ -1,4 +1,4 @@
-class SearchBar extends HTMLElements {
+class SearchBar extends HTMLElement {
 
   connectedCallBack(){
     this.render();
