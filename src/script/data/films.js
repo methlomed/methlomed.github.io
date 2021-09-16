@@ -71,4 +71,4 @@ const films = [
 }
 ];
 
-export default clubs;
+export default films;
