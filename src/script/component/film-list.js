@@ -7,20 +7,26 @@ class FilmList extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = "";
-    this._films.forEach(film => {
-      const filmItemElement = document.createElement("film-item");
+    this.innerHTML = '';
+    this._films.forEach((film) => {
+      const filmItemElement = document.createElement('film-item');
       filmItemElement.film = film;
       this.appendChild(filmItemElement);
-    })
+    });
   }
 
   renderError(message) {
-    this.innerHTML = "";
+    this.innerHTML = '';
     this.innerHTML += `
-    <h2>${message}</h2>
+    <section class="container">
+      <div class="row mb-3" id="film-list">
+        <div class="col-md justify-content-center">       
+             <h2>${message} :(</h2>       
+        </div>
+      </div>
+    </section>   
     `;
   }
 }
 
-customElements.define("film-list", FilmList);
+customElements.define('film-list', FilmList);

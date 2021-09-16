@@ -4,14 +4,14 @@ import DataSource from '../data/data-source.js';
 
 const main = () => {
   const searchElement = document.querySelector("search-bar");
-  const filmListElement = document.querySelector("filmList");
+  const filmListElement = document.querySelector("film-list");
 
   const onButtonSearchClicked = async () => {
       try {
           const result = await DataSource.searchFilm(searchElement.value);
           renderResult(result);
       } catch (message) {
-          fallbackResult(message)
+          fallbackResult(message);
       }
   };
 

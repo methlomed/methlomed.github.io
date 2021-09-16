@@ -1,4 +1,4 @@
-import film from './films.js';
+import films from './films.js';
 
 class DataSource {
     static searchFilm(keyword) {
