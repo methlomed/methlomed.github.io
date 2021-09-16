@@ -6,21 +6,20 @@ class FilmList extends HTMLElement {
     this.render();
   }
 
+  render() {
+    this.innerHTML = "";
+    this._films.forEach(film => {
+      const filmItemElement = document.createElement("film-item");
+      filmItemElement.film = film;
+      this.appendChild(filmItemElement);
+    })
+  }
 
   renderError(message) {
     this.innerHTML = "";
     this.innerHTML += `
     <h2>${message}</h2>
     `;
-  }
-
-  render() {
-    this.innerHTML = "";
-    this._films.forEach(film => {
-      const filmListElement = document.createElement("film-item");
-      filmItemElement.film = film;
-      this.appendChild(filmItemElement);
-    });
   }
 }
 

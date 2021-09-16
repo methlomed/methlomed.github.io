@@ -5,7 +5,7 @@ class DataSource {
         return new Promise((resolve, reject) => {
             const filteredFilms = films.filter(film => film.Title.toUpperCase().includes(keyword.toUpperCase()));
             if (filteredFilms.length) {
-                resolve(filteredClubs);
+                resolve(filteredFilms);
             } else {
                 reject(`${keyword} is not found`);
             }

@@ -20,7 +20,7 @@ class SearchBar extends HTMLElement {
         <div class="ms-md-1">
           <div class="row justify-content-center">
             <div class="col-md-8">
-            <h3>lorem Ipsum</h3>
+            
               <h5 class="display-4">Search Film</h5>
               <div class="input-group mb-3">
                 <input id="searchElement" class="form-control" type="search" placeholder="Film Title" />
