@@ -11,7 +11,6 @@ class FilmList extends HTMLElement {
     <section class="container">
     <div class="row" id="film-list">
       <film-item></film-item>
-      </div>
     </div>
   </section>
     `;
