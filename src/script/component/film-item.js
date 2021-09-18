@@ -5,6 +5,8 @@ class FilmItem extends HTMLElement {
   }
 
   render() {
+    this.classList.add('col-md-4');
+    
     this.innerHTML = `        
         <div class="card mb-4">
           <img src="${this._film.Poster}" class="card-img-top" height="400"/>
