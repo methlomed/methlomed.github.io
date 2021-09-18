@@ -7,14 +7,10 @@ class FilmList extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `
-    <section class="container">
-    <div class="row" id="film-list">
-      <film-item></film-item>
-    </div>
-  </section>
-    `;
+    this.classList.add('row');
+    this.innerHTML = '';
     this._films.forEach((film) => {
+
       const filmItemElement = document.createElement('film-item');
       filmItemElement.film = film;
       this.appendChild(filmItemElement);

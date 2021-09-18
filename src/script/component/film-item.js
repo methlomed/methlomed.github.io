@@ -5,8 +5,7 @@ class FilmItem extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `
-      <div class="col-md-4">   
+    this.innerHTML = `        
         <div class="card mb-4">
           <img src="${this._film.Poster}" class="card-img-top" height="400"/>
           <div class="card-body">
@@ -15,7 +14,6 @@ class FilmItem extends HTMLElement {
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>  
-      </div>
     `;
   }
 }
