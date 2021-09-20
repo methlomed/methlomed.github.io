@@ -1,15 +1,16 @@
-import films from './films.js';
-
 class DataSource {
     static searchFilm(keyword) {
-        return new Promise((resolve, reject) => {
-            const filteredFilms = films.filter(film => film.Title.toUpperCase().includes(keyword.toUpperCase()));
-            if (filteredFilms.length) {
-                resolve(filteredFilms);
+        return fetch(`http://www.omdbapi.com/?apikey=3fa921ae&s=${keyword}`)
+        .then(response => {
+            return response.json();
+        })
+        .then(responseJson => {
+            if(responseJson.teams) {
+                return Promise.resolve(responseJson.films);
             } else {
-                reject(`${keyword} is not found`);
+                return Promise.reject(`${keyword} is not found`)
             }
-        });
+        })
     }
 }
 
