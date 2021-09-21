@@ -21,6 +21,7 @@ class FilmList extends HTMLElement {
     this.innerHTML = '';
     this.innerHTML += `
     <section class="container">
+      <hr>
       <div class="row mb-3" id="film-list">
         <div class="col-md justify-content-center">       
              <h2>${message} :(</h2>       
