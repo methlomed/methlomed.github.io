@@ -5,8 +5,8 @@ class DataSource {
             return response.json();
         })
         .then(responseJson => {
-            if(responseJson.teams) {
-                return Promise.resolve(responseJson.films);
+            if(responseJson.Search) {
+                return Promise.resolve(responseJson.Search);
                 
             } else {
                 return Promise.reject(`${keyword} is not found`)
