@@ -2,7 +2,7 @@ class DataSource {
     static searchFilm(keyword) {
         return fetch(`http://www.omdbapi.com/?apikey=3fa921ae&s=${keyword}`)
         .then(response => {
-            return response.json();
+            return response.json()
         })
         .then(responseJson => {
             if(responseJson.Search) {
