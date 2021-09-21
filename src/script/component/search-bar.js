@@ -22,7 +22,7 @@ class SearchBar extends HTMLElement {
             <div class="col-md-8">
             
               <h5 class="display-4">Search Film</h5>
-              <div class="input-group mb-3">
+              <div class="input-group mb-5">
                 <input id="searchElement" class="form-control" type="search" placeholder="Film Title" />
                 <button id="searchButtonElement" class="btn btn-info" type="submit" >Search</button>
               </div>
