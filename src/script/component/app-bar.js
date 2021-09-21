@@ -22,8 +22,6 @@ class AppBar extends HTMLElement {
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ms-auto">
                 <a class="nav-link active" aria-current="page" href="https://www.dicoding.com">dicoding</a>
-                
-                
               </div>
             </div>
           </div>
