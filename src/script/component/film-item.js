@@ -8,15 +8,15 @@ class FilmItem extends HTMLElement {
     this.classList.add('col-md-4');
     
     this.innerHTML = `        
-        <div class="card mb-4">
+        <div class="card mb-5 mt-4">
           <img src="${this._film.Poster}" class="card-img-top" height="400"/>
           <div class="card-body">
             <h5 class="card-title">${this._film.Title}</h5>
-            <p class="card-text">${this._film.Year}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">${this._film.Year}</p>    
           </div>
         </div>  
     `;
+    
   }
 }
 customElements.define("film-item", FilmItem);
